@@ -1,0 +1,80 @@
+*, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #999;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    perspective: 800px;
+
+}
+body:hover article{
+    transform: translate3d(0, 0 , 100px) rotateY(360deg) ;
+}
+ body article{
+    width: 300px;
+    height: 420px;
+    background: #eee;
+    border: .5rem solid white;
+    border-radius: 6px;
+    box-shadow: 0 0 3rem rgba(0,0,0,.2);
+    display: flex;
+ 
+    justify-content: space-between;
+    align-items: center;
+    transition: all 1.5s ease; 
+    
+} 
+section {
+
+       
+    width: 300px;
+    height: 420px;
+    border: .5rem solid white;
+    border-radius: 6px;
+    position: absolute;
+    z-index: +1;
+    transition: all 1.5s ease; 
+    
+}
+section img{
+    height:100% ;
+    width:100% ;
+    object-fit: fill;
+    justify-content: center;
+}
+body:hover section{
+    transform: translate3d(0, 0 , 100px) rotateY(360deg);
+    transition: all 1.5 ease-in;
+    z-index: -1;
+
+
+}
+
+aside{
+    font-size: 1.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    align-self: flex-start;
+}
+
+aside.bottom {
+    align-self: flex-end;
+    transform: rotate(180deg);
+}
+
+
+h1{
+    font-size: 5rem;
+}
+aside p.suit{
+    font-size:2.4rem ;
+}
